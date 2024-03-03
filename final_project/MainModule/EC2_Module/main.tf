@@ -12,7 +12,7 @@ resource "aws_instance" "ec2_instance" {
   user_data = <<-EOF
               #!/bin/bash
               sudo yum update -y               # Update the system
-              git clone https://github.com/nigorasultonov/final-project-resources-DevOps2022.git       # Clone the project repository. I'll update the url once I create private repo with terraform
+              git clone https://github.com/tch-do-23/final_project_8       # Clone the project repository. 
   
   tags = merge(
     {
