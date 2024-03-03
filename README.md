@@ -4,5 +4,8 @@ Below is the command to export it in command line which is secure way:
 export AWS_ACCESS_KEY_ID="" 
 export AWS_SECRET_KEY="" 
 export AWS_DEFAULT_REGION="'
-terraform apply -var=github_token="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"
 You need to run these commands everytime you ssh into the instance
+You need to run this command to get access to your github account in order to create a repository:
+terraform apply -var=github_token="your.github.token"
+Or run this command before terraform apply:    
+export TF_VAR_github_token="your.github.token"
