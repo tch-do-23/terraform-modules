@@ -4,7 +4,7 @@ resource "aws_instance" "ec2_instance" {
   subnet_id = aws_subnet.public_subnet.id
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   count = length(var.instance_name)
-  ami           = "ami-088495de30f0655c4"     # Replace with appropriate ami-ID
+  ami           = "i-0a6ed7e0c66f224b4"     # Replace with appropriate ami-ID
   instance_type = lookup(var.instance_type, var.instance_name[count.index])
   key_name      = aws_key_pair.pub_key.key_name
 
